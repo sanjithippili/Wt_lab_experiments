@@ -1,0 +1,176 @@
+
+<html>
+    <head>
+        <style>
+           *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           }
+           body {
+            background-color: #F4EEFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+           }
+           .container {
+            background-color: whitesmoke;
+            padding: 30px;
+            box-shadow: 0 2px 18px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            width: 98%;
+            height: 97%;
+           }
+           .tab-box {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 2px solid rgba(229,229,229);
+            position: relative;
+           }
+           .tab-box .tab-btn {
+            font-size: 18px;
+            font-weight: 600;
+            color: #919191;
+            background: none;
+            border: none;
+            padding: 18px;
+            cursor: pointer;
+           }
+           .tab-box .tab-btn.active {
+            color: #7360ff;
+           }
+           .content-box {
+            padding: 20px;
+           }
+           .content-box .content {
+            display: none;
+           }
+           .content-box .content .active {
+            display: block;
+           }
+           .content-box .content h2 {
+            margin-bottom: 10px;
+           }
+           
+           .content p {
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            word-spacing: 2%;
+            color: rgb(26, 26, 26);
+            line-height: 1.6;
+            letter-spacing: 1.5px;
+            }
+        </style>
+        
+    </head>
+<body>
+    <div class="container">
+        <div class="tab-box">
+            <button class="tab-btn" onclick="fun(event,'cse')" id="defaultOpen">CSE</button>
+            <button class="tab-btn" onclick="fun(event,'ece')">ECE</button>
+            <button class="tab-btn" onclick="fun(event, 'eee')">EEE</button>
+            <button class="tab-btn" onclick="fun(event,'mech')">MECH</button>
+            <button class="tab-btn" onclick="fun(event,'it')">IT</button>
+            <button class="tab-btn" onclick="fun(event,'civil')">CIVIL</button>
+        </div>
+
+        <div class="content-box">
+
+            <div class="content" id="cse">
+                
+                <h2>CSE Department Latest Updates</h2><br>
+                    <h3>IEEE Computer Society Event under CS Student Chapter</h3>
+                    <p>"Cracking Product Based Companies and Resume Building"
+                    Resource Person: S.Yashwanth Reddy, SDE-Amazon, California
+                    Date: 11th February 2023 Timings: 10:00AM
+                    Meet link: https://meet.google.com/hfv-ydyx-beh?hs=224</p>
+                    <br>
+                    <h3>Placement Selection 38LPA</h3>
+                    <p>Hearty Congratulations to K Madhumitha(319126510029)bagging the dream offer internship with 90k.</p>
+                    <br>
+                    <h3>Workshop</h3>
+                    <p>Department of CSE planning to conduct Pre-Workdhops on
+                    1. Blockchain Technologies held on 20~22, February 2023
+                    2. Full Stack Development using .Net Core held on 23~25, February 2023
+                    3.Cybersecurity Centre of Excellence in association with NASSCOM Futureskills Prime presents Seven-Day Workshop on Foundations of Cybersecurity (MoU). Click Here
+                    </p>
+                    <br>
+                    <h3>CursorS2k2E</h3>
+                    <p>The department of CSE is going to conduct Techfest CURSORS2K23 on March 2nd and 3rd.</p>
+                    
+            </div>
+
+            <div class="content" id="ece">
+                <h3>VISION OF DEPARTMENT  </h3><br>
+                <p>To become a centre of excellence in Education and Research and produce high quality engineers in the field of Electronics and Communication Engineering to face the challenges of future technology changes.
+                </p><br><br>
+                
+                <h3> MISSION OF DEPARTMENT  </h3><br>
+               <p> 
+                To achieve the vision, the department will
+                
+                Transform students into valuable resources for industry and society by imparting contemporary technical education.
+                
+                Develop interpersonal skills and leadership qualities among students by creating an ambience of academic integrity to participate in various professional activities.
+                
+                Create a suitable academic environment to promote research attitude among students.</p>
+            </div>
+
+            <div class="content" id="eee">
+                <p>The Department of Electrical and Electronics Engineering (EEE) was started in the year 2001-02 with an intake of 40 students and later increased to 60 in the year 2002-03. The intake further increased to 120 and 180 in the years 2009-10 and 2014-15 respectively.The present intake is 150 from the year 2020-21. The UG program in EEE department was accredited by NBA in July 2008 for three years and was re-accredited in August 2013 & 2016 . The department was granted recognition as a research center to provide guidance to full time / part-time Ph. D. scholars.</p>
+            <br>
+                <p>It has 38 qualified and dedicated faculty and is headed by Dr. J. Vijaya Kumar, who has 16.5 years of experience in teaching and industry. It has spacious laboratories viz. Networks, Measurements, Electrical Machines, Power Electronics, Control Systems, Digital Electronics & Micro Processors and Power System Simulation, fulfilling the norms of both Andhra University and AICTE. The Department has a separate Computer Centre with 40 systems to cater to the needs of EEE students. It also has a separate departmental Library with over 2000 books for the students of EEE for ready reference. Student chapters like IE(I), ISTE are active in the department. There are around 200 student members in IE(I) student chapter, around 120 student members and 35 faculty members in ISTE Chapter and around 80 student members in ISHRAE student chapter. Several students participated in the events organized by these student chapters with enthusiasm within and outside the institute and won several prizes.</p>
+            </div>
+
+            <div class="content" id="mech">
+                <p>The Department of Mechanical Engineering, ANITS was started in the academic year 2005-06 with a modest intake of 60. Since then the department has grown by leaps and bounds in terms of student intake and development of infrastructure. The department is presently offering a B. Tech. programme with an in-take of 210 and M Tech (Machine Design) with an in-take of 18. The department is driven by 44 highly qualified faculty members who possess a rich academic and industrial experience. In order to make the teaching - learning process effective, a 1:18 faculty- student ratio is implemented. The department is equipped with the best infrastructure facilities in the form of laboratories, library, e-class rooms, seminar halls, drawing halls, project rooms, board rooms, Lecture Capturing Systems, student activities centers, poker online Automotive hub etc,.</p>
+            <br>
+            <p>The department has the capability to undertake vigorous research projects with the vast research facilities created over the years. It has received Grants from central government organizations like AICTE/DST/UGC under a spectrum of schemes for organizing seminars, taking up research projects, up-gradation of laboratories and travel grants for participating in international conferences held abroad. The department has 15 faculty with doctorates in various fields from premier institutions like NITs, IITs and at least a 5 more are in the pipeline to be added to the existing list in the next year. A total of 120 quality research publications are credited to the department since last 5 years in various international peer reviewed journals and Conferences, which speaks volumes on the intensity of research. </p>
+            
+            </div>
+
+            <div class="content" id="it">
+                <p>Information technology has become a part of our everyday lives, which is a great impact on our society. This Course especially focuses on the application in various information Technologies which meet Industry requirements and administrative systems having importance in Globalization Communication, arise in new jobs.</p>
+                <br>
+                <p>The IT department was started in the year 2001. At present it has 29 qualified teachers (as per the norms of AICTE) headed by Dr Mantripragada Rekha Sundari,Incharge Head of the Department with more than 12 years of experience in Teaching and With good research experience with guide status . We value professionalism, communication, integrity and teamwork.</p>
+                <br>
+                <h4>HIGHLIGHTS</h4>
+                   <p> The IT department has shown its great impression in results at the University examinations
+                    Stood 1st among all the affiliated colleges of AU.
+                    Students offered internships in Amazon,Infosys, Valuelabs etc..
+                    The placement record of department had always been impressive with the salary range of 2.50 Lakhs to 30 Lakhs per annum.
+                    The major recruiters are Amazon,TCS, Infosys,Valuelabs,TechMahindra, TeraData, NTT, IBM, Capgemini, Virtusa, CISCO etc..</p>
+            </div>
+
+            <div class="content" id="civil">
+                <p>The Department of Civil Engineering, established in 2011, offers B.Tech. programme in Civil Engineering of four years duration with an annual intake of 60 students and M.Tech Program in Soil Mechanics Specialization with an annual intake of 18. The Department was accredited by NBA in June 2021 for three years. The Department is headed by Prof. B.N.D. Narasinga Rao, having 28 years of teaching and consultancy experience. The Department is supported by such distinguished faculty members Dr. A.Santha Ram, Dr. R Rama Rao and other qualified and experienced faculty members apart from skilled technicians and non-teaching staff. The Department has well equipped laboratories, spacious class rooms, computer centre, seminar hall, etc. Dr. B.N.D.Narasinga Rao, the head of the department, has authored a text book on Soil Mechanics & Foundation Engineering published by Wiley India. </p>
+                <br>
+                <p>The Department stands first in the Results every year among all the affiliated colleges of Andhra University. The students of the Civil Engineering have proved their mettle by winning First and Second Prizes in Technical Paper Presentations, Model Presentation contests at reputed Institutions including VIT Vellore, IIT Kharagpur, IIT Bhubaneswar, Andhra University, GITAM University, GMRIT, GVP, etc. Students of the department were selected by Infosys, MuSigma, Capgemini India, IBM, CADeploy, Tech Mahindra, Nagarjuna Constructions etc. through campus placements. A few students pursue their higher studies at reputed institutions such as IIT Guwhati, IIT Kharagpur, IIIT Hyderabad, NICMAR Pune, as well as at Andhra University and other universities etc.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function fun(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("content");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tab-btn");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+</html>
+

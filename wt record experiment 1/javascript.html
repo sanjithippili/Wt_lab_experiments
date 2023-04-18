@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: #B3E5BE;
+                padding: 30px;
+            }
+            h1 {
+                padding: 10px;
+            }
+            button {
+                border-radius: 5px;
+                background-color: #BAD7E9;
+                padding: 15px;
+                margin: 20px;
+                border: none;
+                box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+                color: black;
+                font-weight: bold;
+            }
+            img {
+                border-radius: 10px;
+                box-shadow: 0 2px 16px rgba(1,1,1,1);
+            }
+            input {
+                padding: 10px;
+                border-radius: 10px;
+                width: 50%;
+            }
+            input[type=color]{
+                width:20%;
+            }
+        </style>
+    </head>
+    <body onload="window.alert('This is window event, Click on ok to continue..!')">
+        
+        <h1 id="h">JAVASCRIPT EVENTS</h1>
+        <input type="text" id="ch" placeholder="Enter something to set custom heading">
+        <BUTTON ID="B" ONCLICK="CHANGE()">CHANGE HEADING</BUTTON> 
+        <br>
+        <IMG ID="i" src="anits.jpeg">
+         <br>  
+        <BUTTON onclick="document.getElementById('i').src ='anits1.jpeg'">Image 1</BUTTON>
+        <BUTTON onclick="document.getElementById('i').src = 'anits2.jpeg'">Image 2</BUTTON>
+        <BUTTON onclick="document.getElementById('i').src = 'anits3.jpeg'">Image 3</BUTTON>
+        <BUTTON onclick="document.getElementById('i').src = 'anits4.jpeg'">Image 4</BUTTON>
+        <BUTTON onclick="document.getElementById('i').src = 'anits5.jpeg'">Image 5</BUTTON>
+        <h2>Pick color to Change the background-color</h2>
+        <input type =color oninput="chb()" id="c">
+        <h2>Mousehover Event</h2>
+        <p id="para" > Anil Neerukonda Institute of Technology and SCIENCES</p>
+            
+        <BUTTON ID="B2" ONCLICK="changecolor()">CHANGE COLOR</BUTTON> 
+        <h2> Enter something here for key event</h2>
+        <input type="text" id="input1" onkeydown="keyevent()" placeholder="Type your text here.."/>
+        <SCRIPT>
+            function CHANGE(){
+                var x=document.getElementById("ch").value
+                if(x==="")
+                {
+                document.getElementById('h').innerHTML='Enter something in textbox...!';
+                }
+                else
+                {
+                document.getElementById('h').innerHTML=x;
+                }
+            }
+            function chb()
+	    {
+	    var q=document.getElementById("c").value;
+	    document.body.style.backgroundColor = q;
+	    }
+            function changecolor(){
+            let t= document.getElementById('para')
+            t.style.color='blue'}
+            let t1= document.getElementById('para')
+            t1.addEventListener('mouseover',function()
+            {
+               t1.style.color='red' ;
+            });
+            t1.addEventListener('mouseout',function()
+            {
+               t1.style.color='black' ;
+            }
+            );
+            function keyevent()
+	    {
+		    document.getElementById("input1");
+		    alert("Pressed a key,This is key event");
+	    }
+            </SCRIPT>
+    
+    
+    </body>
+</html>

@@ -1,0 +1,275 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color:#B3E5BE;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+                        
+            h1 {
+            font-size: 35px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            }
+
+            h2 {
+            font-size: 25px;
+            padding-bottom: 15px;
+            }
+
+            .established {
+            font-style: italic;
+            }
+
+            h1, h2, p {
+            text-align: center;
+            
+            }
+            .menu {
+                display: block;
+                background-color: #BAD7E9;
+                border-radius: 10px;
+                width: 100%;
+                height: 100%;
+                padding: 10px;
+                text-align: center;
+            }
+            td {
+              width: 70%;
+              padding: 30px;
+            }
+                        
+            .item p {
+            display: inline-block;
+            margin-top: 6px;
+            margin-bottom: 6px;
+            font-size: 15px;
+            }
+
+            .dessert {
+            text-align: left;
+            width: 50%;
+            padding-left: 10px;
+            }
+
+            .price {
+            text-align: right;
+            width: 25%;
+            padding-right: 15px;
+            }
+                        
+            img {
+            display: inline;
+            max-width: 60px;
+            max-height: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top:-25px;
+            border-radius: 20px;
+            }
+
+            hr {
+            height: 2px;
+            background-color:whitesmoke;
+            border-color: wheat;
+            }
+            footer {
+            font-size: 14px;
+            }
+            select, #entrybox, input[type=submit], input[type=button] {
+              width: 40%;
+              margin: 15px;
+              padding: 12px 20px;
+              border-radius: 10px;
+              box-sizing: border-box;
+              border: none;
+              background-color: #EDF1D6;
+            }
+            .bill {
+              border: none;
+              border-radius: 5px;
+              padding: 20px;
+              line-height: 1;
+
+            }
+            option {
+              padding: 20px;
+            }
+            .report {
+              background-color: #BAD7E9;
+              padding: 20px;
+              border-radius: 10px;
+            }
+            textarea{
+              background-color: #EDF1D6;
+              resize: none;
+            }
+        </style>
+    </head>
+    <body>
+      <table>
+        <tr>
+          <td>
+            <div class="menu">
+              <header>
+  
+              </header>
+              <main>
+                  
+                <h1>Fashion Hub</h1>
+                <p class="established">Since 2K15</p>
+                <hr>
+                  <section>
+                      <h2>Items</h2>
+                      <article class="item">
+                        <p class="Items">Shirts</p><p class="price">649/-</p>
+                      </article>
+                      <article class="item">
+                        <p class="Items">Jeans</p><p class="price">1299/-</p>
+                      </article>
+                      <article class="item">
+                        <p class="Items">Formals</p><p class="price">999/-</p>
+                      </article>
+                      <article class="item">
+                        <p class="Items">Hoodies</p><p class="price">799/-</p>
+                      </article>
+                      <article class="item">
+                          <p class="Items">T-Shirts</p><p class="price">398/-</p>
+                        </article>
+                    </section>
+                    <hr>
+              </main>
+              <footer>
+
+                    <p class="address">G.T Road,Srikakulam, Andhra pradesh</p>
+              </footer>
+          </div>
+          </td>
+
+          <td>
+            <div class="report">
+              
+<div style="width:80%;display:table-cell;">
+    
+  <form class="bill1">
+    <select id="menu">
+  <option selected value = "shirt">Shirts</option>
+  <option value = "jean">Jeans</option>
+  <option value = "formal">Formals</option>
+  <option value = "hoodie">Hoodies</option>
+  <option value = "tshirt">T-Shirts</option>
+</select>
+    <input type="text" id="entrybox" pattern="\d*" placeholder="quantity">
+    <hr>
+    <input type="button" value="ADD T0 CART" class="mybutton" id="getme">
+  </form>
+  
+  <textarea class="bill" cols="70" rows="12" id="writeme"></textarea>
+ <br>
+ 
+ <span><input type="submit" value="PAY BILL"  id="out"></span>
+      <span><input type="submit" value="EMPTY CART"  id="clr"></span>
+      <br>
+      
+  
+  
+  </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+        
+
+        
+        
+          <script>
+    var shirt = 649;
+    var jean = 1299;
+    var formal = 999;
+    var hoodie= 799;
+    var tshirt = 398;
+    var total = 0;
+    var check = 1;
+    var gw;
+    var item;
+    var num;
+    var adder = document.querySelector("#getme");
+    adder.addEventListener("click", getMe);
+    var by = document.querySelector("#out");
+    by.addEventListener("click", checkOut);
+    var cme = document.querySelector("#clr");
+    cme.addEventListener("click", clearMe);
+
+    function getMe() {
+      item = document.querySelector("#menu").value;
+      num = parseFloat(document.querySelector("#entrybox").value);
+      gw = document.querySelector("#writeme");
+      go= document.querySelector("#op");
+      if (Number.isNaN(num) === true) {
+        alert("Only Numbers !!! Or The Field is Empty");
+        check = 0;
+      }
+      else if (num<0) {
+        alert("Please enter positive value...!");
+        check = 0;
+      }
+      else{
+        check = 1;
+      }
+      if (check == 1) {
+     
+        switch (item) {
+          case "shirt":
+            var st = shirt * num;
+            gw.value += "Shirts " + num + " pieces = " + st + " rs\r\n";
+            total += st;
+            num.value = "";
+            break;
+          case "jean":
+            var at = jean * num;
+            gw.value += "Jeans " + num + " pieces = " + at + " rs\r\n";
+            total += at;
+            num.value = "";
+            break;
+          case "formal":
+            var gr = formal * num;
+            gw.value += "Formals " + num + " pieces = " + gr + " rs\r\n";
+            total += gr;
+            num.value = "";
+            break;
+          case "hoodie":
+            var ga =hoodie * num;
+            gw.value += "Hoodies " + num + " pieces = " + ga + " RS\r\n";
+            total += ga;
+            num.value = "";
+            break;
+          case "tshirt":
+            var pomy = tshirt * num;
+            gw.value += "T-Shirts " + num + " pieces = " + pomy + " rs\r\n";
+            total += pomy;
+            num.value = "";
+            break;
+        }
+
+      }
+    }
+
+    function checkOut() {
+
+      gw.value += "---------------------------------------------------------\n";
+      gw.value += "---------------------------------------------------------\n";
+      gw.value += "TOTAL     =     " + total + " RS \n";
+      
+      gw.value +="\nTHANKYOU!\nVISIT AGAIN...:-)"
+      
+      total = 0;
+    }
+    function clearMe () {
+      gw.value = "";
+     
+    }
+
+  </script>
+       
+    </body>
+</html>
