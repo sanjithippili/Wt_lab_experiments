@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Sign Up
+        </title>
+        <style>
+            body{
+                background-image: url(background.png);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                overflow: hidden;
+            }
+                #signupform{
+            background-color: rgb(167, 244, 244);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            width: 600px;
+            height: 650px;
+                }
+                h2{
+        font-family:'Times New Roman', Times, serif;
+        font-size:xx-large;
+        color:#0044cc;
+        text-align: center;
+    }
+    input[type=submit] {
+      width: 50%;
+      background-color:goldenrod;
+      color: white;
+      padding: 20px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor:pointer;
+      margin-left: 150px;
+    }
+    input[type=text],input[type=password],input[type=date]{
+      width: 98%;
+      padding: 12px 20px;
+      margin: 4px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-left: 8px;
+    }
+    label{
+        margin-left: 15px;
+    }
+        </style>
+    </head>
+    <body>
+        <div id="signupform">
+            <form name="lgform" action="valid2.php" method="POST">
+            <h2>Facebook SignUp</h2>
+            <label for = "fname">First Name:</label>
+            <input type="text" name="fname" required placeholder="Enter firstname">
+            <label for = "lname">Last Name:</label>
+            <input type="text" name="lname" required placeholder="Enter lastname">
+            <label for = "uname">User Name:</label>
+            <input type="text" name="uname" required placeholder="ex:-sanjith6">
+            <label for = "mob">Mobile:</label>
+            <input type="text" name="mob" required size="10" placeholder="ex:-7075490186">
+            <label for = "dob">Date Of Birth:</label>
+            <input type="date" name="dob" required>
+            <br><br>
+            <label for="gender">Gender:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="gender" required value="Male">Male &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="gender" required value="Female">Female
+            <br><br>    
+            <label for="pass">Password:</label>
+            <input type="password" name="pass" required placeholder="Enter password">
+            <input type="submit" name="signup" value="Sign Up">
+            </form>
+        </div>
+    </body>
+</html>
